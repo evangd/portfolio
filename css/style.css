@@ -1,0 +1,248 @@
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	font-family: Georgia, serif;
+	/*background: linear-gradient(white, 85%, black);*/
+}
+
+::selection {
+	background-color: yellow;
+}
+
+strong {
+	font-family: Helvetica, sans-serif;
+}
+
+blockquote {
+	font-family: 'Barlow', sans-serif;
+}
+
+#container {
+	width: 67%;
+	margin: auto;
+	margin-top: 5em;
+	padding: 1em;
+}
+
+/* text-based elements */
+#name {
+	/*font-weight: normal;*/
+	margin-left: 1em;
+	display: inline-block;
+}
+
+#home {
+	cursor: pointer;
+}
+
+#font {
+	font-family: 'Barlow', sans-serif;
+	font-weight: normal;
+	/*background-color: black;
+	color: white;*/
+}
+
+.italics {
+	font-style: italic;
+	font-weight: normal;
+}
+
+/* navigation elements */
+
+header {
+	position: fixed;
+	top: 0;
+	width: calc(100% - 1em);
+	
+	
+	border-bottom: 2px solid black;
+	background-color: white;
+	padding: 0.5em; /* SUBJECT TO CHANGE */
+	
+	padding-top: 0em;
+	padding-bottom: 0em;
+	
+	z-index: 1;
+}
+
+nav {
+	float: right;
+	height: 100%;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+nav > ul {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+	font-family: 'Barlow', sans-serif;
+}
+
+nav > ul > li {
+	padding: 1em;
+	float: right;
+}
+
+/* I want it to do this but since you can't click ... idk maybe I'll switch the a and li tags around at some point
+nav > ul > li:hover {
+	cursor: pointer;
+} */
+
+nav > ul > li::after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 2px;
+	background-color: black;
+	transition: transform 0.2s ease-in-out;
+    transform: scale(0);
+	
+}
+
+nav > ul > li:hover::after {
+	transform: scale(1);
+}
+
+nav > ul > li > a {
+	text-decoration: none;
+	color: black;
+	height: 100%;
+	width: 100%;
+}
+
+#blog-button {
+	background-color: black;
+}
+
+#blog-button > a {
+	color: white;
+}
+
+#blog-button::after {
+	background-color: white;
+}
+
+.onpage::after {
+	transform: scale(1);
+}
+
+/* PAGE CONTENT */
+
+#me {
+	display: inline;
+	float: right;
+	margin-left: 1em;
+	margin-bottom: 1em;
+	margin-right: 0;
+	z-index: -1;
+	width: 200px;
+}
+
+#me > img {
+	height: 200px;
+	width: 200px;
+	clip-path: circle();
+}
+
+figcaption {
+	font-style: italic;
+	text-align: center;
+	margin-top: 0.5em;
+	font-family: 'Barlow', sans-serif;
+}
+
+#container > p, #container > ul > li, blockquote {
+	font-size: 20px;
+	line-height: 1.75em;
+}
+
+#container > h2 {
+	scroll-margin-top: 4em;
+	font-weight: normal; /* still deciding */
+	font-size: 28px;
+	font-family: Helvetica, sans-serif;
+	
+}
+
+#container > p > a, #container > ul > li > a {
+	color: black;
+}
+
+#container > p > a:hover, #container > ul > li > a:hover {
+	background-color: yellow;
+	/*font-style: italic; leave here? */
+}
+
+/* footer stuff */
+
+footer {
+	text-align: center;
+	font-family: 'Barlow', sans-serif;
+}
+
+/* blog things */
+
+.date {
+	display: inline-block;
+	text-align: right;
+	font-family: 'Barlow', sans-serif;
+	font-style: italic;
+}
+
+@media screen and (max-width: 900px) {
+	header {
+		text-align: center;
+	}
+	
+	#container {
+		margin-top: 8em;
+		width: 75%;
+	}
+	
+	#container > h2 {
+		scroll-margin-top: 6em;
+	}
+	
+	#name {
+		margin-left: 0;
+		margin-bottom: 0;
+	}
+	
+	nav {
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	nav > ul {
+		display: inline-block;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.italics, #slash {
+		display: none;
+	}
+	
+	#me {
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		float: none;
+	}
+	
+	#container > p, #container > ul > li, blockquote {
+		font-size: 18px;
+	}
+
+	header { 
+		text-size-adjust: none;
+		-webkit-text-size-adjust: none;
+		-moz-text-size-adjust: none;
+		-ms-text-size-adjust: none;
+	}
+}
