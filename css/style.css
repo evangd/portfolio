@@ -8,6 +8,10 @@ body {
 	/*background: linear-gradient(white, 85%, black);*/
 }
 
+h1 {
+	font-size: 2em;
+}
+
 ::selection {
 	background-color: yellow;
 }
@@ -18,6 +22,12 @@ strong {
 
 blockquote {
 	font-family: 'Barlow', sans-serif;
+	font-size: 20px;
+	font-style: italic;
+}
+
+cite {
+	font-style: normal;
 }
 
 #container {
@@ -70,13 +80,15 @@ header {
 }
 
 nav {
-	float: right;
-	height: 100%;
-	padding-top: 1em;
-	padding-bottom: 1em;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	/*padding-top: 1em;
+	padding-bottom: 1em;*/
 }
 
 nav > ul {
+	display: flex;
 	list-style-type: none;
 	padding: 0px;
 	margin: 0px;
@@ -85,7 +97,6 @@ nav > ul {
 
 nav > ul > li {
 	padding: 1em;
-	float: right;
 }
 
 /* I want it to do this but since you can't click ... idk maybe I'll switch the a and li tags around at some point
@@ -101,14 +112,13 @@ nav > ul > li::after {
 	background-color: black;
 	transition: transform 0.2s ease-in-out;
     transform: scale(0);
-	
 }
 
 nav > ul > li:hover::after {
 	transform: scale(1);
 }
 
-nav > ul > li > a {
+nav a {
 	text-decoration: none;
 	color: black;
 	height: 100%;
@@ -156,9 +166,13 @@ figcaption {
 	font-family: 'Barlow', sans-serif;
 }
 
-#container > p, #container > ul > li, blockquote {
+#container > p, #container > ul > li, .post > p {
 	font-size: 20px;
 	line-height: 1.75em;
+}
+
+li > ul {
+	list-style: square;
 }
 
 #container > h2 {
@@ -166,16 +180,27 @@ figcaption {
 	font-weight: normal; /* still deciding */
 	font-size: 28px;
 	font-family: Helvetica, sans-serif;
-	
 }
 
-#container > p > a, #container > ul > li > a {
+#container > h3, .post > h3 {
+	font-weight: normal;
+	font-family: Helvetica, sans-serif;
+	font-size: 28px;
+	margin-bottom: 0.5em;
+} 
+
+#container > h4 {
+	font-weight: normal;
+	font-family: Helvetica, sans-serif;
+	font-size: 24px;
+}
+
+#container a {
 	color: black;
 }
 
-#container > p > a:hover, #container > ul > li > a:hover {
+#container a:hover {
 	background-color: yellow;
-	/*font-style: italic; leave here? */
 }
 
 /* footer stuff */
@@ -185,41 +210,55 @@ footer {
 	font-family: 'Barlow', sans-serif;
 }
 
+/* #sky {
+    position: fixed;
+	height: 40px;
+	width: 40px;
+    bottom: 2em;
+    right: 2em;
+    cursor: pointer;
+	box-shadow: 5px 5px 5px 1px;
+} */
+
 /* blog things */
+
+.post {
+	border-bottom: 2px dotted black;
+}
 
 .date {
 	display: inline-block;
 	text-align: right;
 	font-family: 'Barlow', sans-serif;
-	font-style: italic;
+	margin-bottom: 1em;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 950px) {
 	header {
 		text-align: center;
 	}
 	
 	#container {
-		margin-top: 8em;
+		margin-top: 8.5em;
 	}
 	
 	#container > h2 {
-		scroll-margin-top: 6em;
+		scroll-margin-top: 6.25em;
 	}
 	
 	#name {
 		margin-left: 0;
-		margin-bottom: 0;
+		margin-bottom: 0.25em;
 	}
 	
 	nav {
-		float: none;
+		flex-direction: column;
 		margin-left: auto;
 		margin-right: auto;
 	}
 	
 	nav > ul {
-		display: inline-block;
+		padding: 1em;
 	}
 }
 
@@ -238,7 +277,7 @@ footer {
 	#container > p, #container > ul > li, blockquote {
 		font-size: 18px;
 	}
-
+	
 	header { 
 		text-size-adjust: none;
 		-webkit-text-size-adjust: none;
@@ -246,3 +285,23 @@ footer {
 		-ms-text-size-adjust: none;
 	}
 }
+
+/* @media screen and (max-width: 360px) {
+	nav {
+		display: block;
+	}
+
+	nav > ul {
+		overflow: auto;
+		white-space: no-wrap;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	nav > ul::-webkit-scrollbar {
+		display: none;
+	}
+
+	nav > ul > li {
+		display: flex;
+	}
+} */
