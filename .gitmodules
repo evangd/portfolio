@@ -1,3 +1,6 @@
 [submodule "grackle"]
 	path = grackle
 	url = git@github.com:evangd/grackle.git
+[submodule "tictactoe"]
+	path = tictactoe
+	url = git@github.com:evangd/tictactoe.git
