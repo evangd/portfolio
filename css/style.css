@@ -1,10 +1,14 @@
+:root {
+	font-family: Georgia, serif;
+	color: #1b1b1b;
+}
+
 html {
 	scroll-behavior: smooth;
 }
 
 body {
 	margin: 0;
-	font-family: Georgia, serif;
 	background-color: #f8f8f8;
 }
 
@@ -52,8 +56,8 @@ cite {
 #font {
 	font-family: 'Barlow', sans-serif;
 	font-weight: normal;
-	/*background-color: black;
-	color: white;*/
+	/*background-color: #1b1b1b;
+	color: #f8f8f8;*/
 }
 
 .italics {
@@ -69,7 +73,7 @@ header {
 	width: calc(100% - 1em);
 	
 	
-	border-bottom: 2px solid black;
+	border-bottom: 2px solid #1b1b1b;
 	background-color: #f8f8f8;
 	padding: 0.5em; /* SUBJECT TO CHANGE */
 	
@@ -109,7 +113,7 @@ nav > ul li::after {
 	display: block;
 	width: 100%;
 	height: 2px;
-	background-color: black;
+	background-color: #1b1b1b;
 	transition: transform 0.2s ease-in-out;
     transform: scale(0);
 }
@@ -120,21 +124,21 @@ nav > ul li:hover::after {
 
 nav a {
 	text-decoration: none;
-	color: black;
+	color: #1b1b1b;
 	height: 100%;
 	width: 100%;
 }
 
 #blog-button {
-	background-color: black;
+	background-color: #1b1b1b;
 }
 
 #blog-button > a {
-	color: white;
+	color: #f8f8f8;
 }
 
 #blog-button::after {
-	background-color: white;
+	background-color: #f8f8f8;
 }
 
 .onpage::after {
@@ -196,7 +200,7 @@ li > ul {
 }
 
 #container a {
-	color: black;
+	color: #1b1b1b;
 }
 
 #container a:hover {
@@ -223,7 +227,7 @@ footer {
 /* blog things */
 
 .post {
-	border-bottom: 2px dotted black;
+	border-bottom: 2px dotted #1b1b1b;
 }
 
 .date {
@@ -293,7 +297,7 @@ footer {
 
 	nav > ul {
 		overflow: auto;
-		white-space: no-wrap;
+		#f8f8f8-space: no-wrap;
 		-webkit-overflow-scrolling: touch;
 	}
 
