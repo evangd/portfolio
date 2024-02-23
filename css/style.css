@@ -1,6 +1,10 @@
 :root {
+	--off-white: #fcfcfc;
+	--off-black: #1b1b1b;
+
 	font-family: Georgia, serif;
-	color: #1b1b1b;
+	color: var(--off-black);
+	
 }
 
 html {
@@ -9,7 +13,7 @@ html {
 
 body {
 	margin: 0;
-	background-color: #f8f8f8;
+	background-color: var(--off-white);
 }
 
 h1 {
@@ -56,8 +60,6 @@ main {
 #font {
 	font-family: 'Barlow', sans-serif;
 	font-weight: normal;
-	/*background-color: #1b1b1b;
-	color: #f8f8f8;*/
 }
 
 .italics {
@@ -73,8 +75,8 @@ header {
 	width: calc(100% - 1em);
 	
 	
-	border-bottom: 2px solid #1b1b1b;
-	background-color: #f8f8f8;
+	border-bottom: 2px solid var(--off-black);
+	background-color: var(--off-white);
 	padding: 0.5em; /* SUBJECT TO CHANGE */
 	
 	padding-top: 0em;
@@ -113,7 +115,7 @@ nav > ul li::after {
 	display: block;
 	width: 100%;
 	height: 2px;
-	background-color: #1b1b1b;
+	background-color: var(--off-black);
 	transition: transform 0.2s ease-in-out;
     transform: scale(0);
 }
@@ -124,21 +126,9 @@ nav > ul li:hover::after {
 
 nav a {
 	text-decoration: none;
-	color: #1b1b1b;
+	color: var(--off-black);
 	height: 100%;
 	width: 100%;
-}
-
-#blog-button {
-	background-color: #1b1b1b;
-}
-
-#blog-button > a {
-	color: #f8f8f8;
-}
-
-#blog-button::after {
-	background-color: #f8f8f8;
 }
 
 .onpage::after {
@@ -194,7 +184,7 @@ main > h3 {
 }
 
 main a {
-	color: #1b1b1b;
+	color: var(--off-black);
 }
 
 main a:hover {
@@ -208,20 +198,10 @@ footer {
 	font-family: 'Barlow', sans-serif;
 }
 
-/* #sky {
-    position: fixed;
-	height: 40px;
-	width: 40px;
-    bottom: 2em;
-    right: 2em;
-    cursor: pointer;
-	box-shadow: 5px 5px 5px 1px;
-} */
-
 /* blog things */
 
 .post {
-	border-bottom: 2px dotted #1b1b1b;
+	border-bottom: 2px dotted ;
 }
 
 .date {
